@@ -1,0 +1,20 @@
+RESCUE VISION - VS CODE WINDOWS SETUP
+
+1. Extract this ZIP and open the rescue-vision folder in VS Code.
+2. Open a PowerShell terminal in that folder.
+3. Backend:
+   cd backend
+   py -m venv .venv
+   .\.venv\Scripts\python.exe -m pip install -r requirements.txt
+   .\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --port 8000
+4. Keep backend running. In a SECOND terminal from project root:
+   cd frontend
+   npm install
+   npm run dev
+5. Open http://localhost:5173
+6. API docs: http://127.0.0.1:8000/docs
+7. Click Rescue Planner in the sidebar to test the new feature.
+
+For troubleshooting, first check the backend terminal error, then open /docs.
+The bundled YOLO model is in backend/models.
+See FIXES_AND_TEST_RESULTS.md for verified and unverified features.
